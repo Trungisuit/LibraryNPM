@@ -96,6 +96,37 @@
           }
         }
       }
+    },
+    "trung-format-paragraph": {
+      "projectType": "library",
+      "root": "projects/trung-format-paragraph",
+      "sourceRoot": "projects/trung-format-paragraph/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/trung-format-paragraph/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/trung-format-paragraph/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/trung-format-paragraph/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/trung-format-paragraph/src/test.ts",
+            "tsConfig": "projects/trung-format-paragraph/tsconfig.spec.json",
+            "karmaConfig": "projects/trung-format-paragraph/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
